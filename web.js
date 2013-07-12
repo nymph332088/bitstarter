@@ -1,6 +1,6 @@
 var fs = require('fs');
-var buf = new Buffer(100);
-fs.read('./index.html', buf);
+var buf = fs.readFileSync('./index.html');
+
 var express = require('express');
 var app = express.createServer(express.logger());
 
